@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>xcha project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="login-screen" class="screen" style="background-image: url('assets/login_background.png');">
+    <h1>Do you want your own library?</h1>
+    <input type="email" id="email" placeholder="your email" />
+    <input type="password" id="password" placeholder="password" />
+    <button onclick="login()">LOGIN</button>
+  </div>
+
+  <div id="file-screen" class="screen hidden" style="background-image: url('assets/file_background.jpeg');">
+    <aside id="sidebar">
+      <div onclick="toggleSidebar()">📄</div>
+      <nav>
+        <button onclick="showMyFiles()">📂 ملفاتي</button>
+        <button onclick="showPublicFiles()">🌍 العامة</button>
+        <button onclick="uploadFile()">⬆️ رفع ملف</button>
+        <button onclick="logout()">🚪 خروج</button>
+      </nav>
+    </aside>
+    <main>
+      <input type="text" id="searchInput" oninput="searchFiles()" placeholder="Search here..." />
+      <div id="file-list"></div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
